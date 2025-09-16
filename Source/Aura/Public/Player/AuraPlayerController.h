@@ -10,7 +10,7 @@
 class 	UInputMappingContext;
 class   UInputAction;
 struct  FInputActionValue;
-//class   IEnemyInterface;
+class   IEnemyInterface;
 
 /**
  *
@@ -45,7 +45,6 @@ private:
 	IEnemyInterface* ThisActor;*/
 
 	// ½Ó¿ÚÖ¸Õëproblem
-
 	TObjectPtr<AActor> LastActor;
 	TObjectPtr<AActor> ThisActor;
 

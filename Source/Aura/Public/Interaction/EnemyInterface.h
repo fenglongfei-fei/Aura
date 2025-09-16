@@ -4,7 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "EnemyInterface.generated.h"
+//#include "Engine/EngineTypes.h"
+//#include "GameFramework/Actor.h"
+
+#include "EnemyInterface.generated.h"   // Must be the last include
+
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
