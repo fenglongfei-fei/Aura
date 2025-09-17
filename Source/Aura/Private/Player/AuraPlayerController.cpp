@@ -30,9 +30,14 @@ void AAuraPlayerController::CursorTrace()
 	GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
 	if (!CursorHit.bBlockingHit) return;
 
+	/*TObjectPtr<IEnemyInterface> LastActor;
+	TObjectPtr<IEnemyInterface> ThisActor;*/
+
 	LastActor = ThisActor;
 	ThisActor =(CursorHit.GetActor());
-	//Cast<IEnemyInterface>
+	// Cast<IEnemyInterface>
+	//ThisActor = Cast<IEnemyInterface>(CursorHit.Actor);
+
   /**
 	*
 	*

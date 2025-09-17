@@ -1,4 +1,4 @@
-// LF
+//LF
 
 #pragma once
 
