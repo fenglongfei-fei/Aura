@@ -2,7 +2,6 @@
 
 
 #include "Character/AuraEnemy.h"
-
 #include "AbilitySystem/AuraAbilitySystemComponent.h"
 #include "Aura/Aura.h"
 
@@ -22,7 +21,7 @@ AAuraEnemy::AAuraEnemy()
 // 突出显示
 void AAuraEnemy::HighlightActor()
 {
-	//bHighlighted = true;
+	bHighlighted = true;
 
 	GetMesh()->SetRenderCustomDepth(true);
 	GetMesh()->SetCustomDepthStencilValue(CUSTOM_DEPTH_RED); 
@@ -34,7 +33,7 @@ void AAuraEnemy::HighlightActor()
 // 不突出显示
 void AAuraEnemy::UnHighlightActor()
 {
-	//bHighlighted = false;
+	bHighlighted = false;
 
 	GetMesh()->SetRenderCustomDepth(false);
 	weapon->SetRenderCustomDepth(false);

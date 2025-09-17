@@ -9,10 +9,9 @@
 AAuraPlayerController::AAuraPlayerController()
 {
 	bReplicates = true;
+
 }
 
-
-// 播放器刻度 
 
 void AAuraPlayerController::PlayerTick(float DeltaTime)   
 {
@@ -22,50 +21,39 @@ void AAuraPlayerController::PlayerTick(float DeltaTime)
 
 }
 
-// 光标追踪 
-
 void AAuraPlayerController::CursorTrace()
 {
 	FHitResult CursorHit;
 	GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
+	
 	if (!CursorHit.bBlockingHit) return;
 
-	/*TObjectPtr<IEnemyInterface> LastActor;
-	TObjectPtr<IEnemyInterface> ThisActor;*/
-
 	LastActor = ThisActor;
-	ThisActor =(CursorHit.GetActor());
-	// Cast<IEnemyInterface>
-	//ThisActor = Cast<IEnemyInterface>(CursorHit.Actor);
+	ThisActor = Cast<IEnemyInterface>(CursorHit.GetActor());
 
-  /**
-	*
-	*
-	**/
 
 	if (LastActor == nullptr)
 	{
 		if (ThisActor != nullptr)
 		{
 		
-			/*ThisActor->HighlightActor();*/
+			ThisActor->HighlightActor();
 
 		}
 
 		else
 		{
-
+			
 		}
 
 	}
-
 	// 最后一个有效
 	else
 	{
 		if (ThisActor == nullptr)
 		{
-			/*LastActor->UnHighlightActor();*/
-
+			LastActor->UnHighlightActor();
+		
 		}
 
 		// 当前有效
@@ -73,15 +61,15 @@ void AAuraPlayerController::CursorTrace()
 		{
 			if (LastActor != ThisActor)
 			{
-				// D:
-			/*	LastActor->UnHighlightActor();
-				ThisActor->HighlightActor();*/
 
-				
+				LastActor->UnHighlightActor();
+				ThisActor->HighlightActor();
+
 			}
 
 			else
 			{
+			
 
 			}
 
