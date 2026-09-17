@@ -2,7 +2,7 @@
 
 
 #include "AbilitySystem/Data/LootTiers.h"
-
+// 每种掉落物独立重复 MaxNumberToSpawn 次，每次按 `ChanceToSpawn` 百分比掷骰决定是否产出
 TArray<FLootItem> ULootTiers::GetLootItems()
 {
 	TArray<FLootItem> ReturnItems;

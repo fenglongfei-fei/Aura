@@ -13,7 +13,7 @@
 #include "Serialization/ObjectAndNameAsStringProxyArchive.h"
 #include "UI/ViewModel/MVVM_LoadSlot.h"
 #include "GameFramework/Character.h"
-
+// 遍历世界中所有实现 SaveInterface 的 Actor，用 `FObjectAndNameAsStringProxyArchive`（ArIsSaveGame）把属性序列化为二进制字节流存入 SaveGame 槽位；加载时按 Actor 名匹配后反序列化还原
 void AAuraGameModeBase::SaveSlotData(UMVVM_LoadSlot* LoadSlot, int32 SlotIndex)
 {
 	if (UGameplayStatics::DoesSaveGameExist(LoadSlot->GetLoadSlotName(), SlotIndex))

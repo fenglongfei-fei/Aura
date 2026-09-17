@@ -2,7 +2,7 @@
 
 
 #include "AbilitySystem/Data/LevelUpInfo.h"
-
+// 从 1 级起逐级比较 XP 是否达到升级门槛，返回当前等级（顺序查找而非二分）
 int32 ULevelUpInfo::FindLevelForXP(int32 XP) const
 {
 	int32 Level = 1;

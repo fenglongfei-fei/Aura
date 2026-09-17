@@ -7,7 +7,7 @@
 #include "Game/AuraGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 #include "UI/ViewModel/MVVM_LoadSlot.h"
-
+// ViewModel 层用 UE MVVM 把存档槽位状态双向绑定到 UI 控件，属性变化时广播委托刷新 HUD
 void UMVVM_LoadScreen::InitializeLoadSlots()
 {
 	LoadSlot_0 = NewObject<UMVVM_LoadSlot>(this, LoadSlotViewModelClass);

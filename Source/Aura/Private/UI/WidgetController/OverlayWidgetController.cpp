@@ -9,7 +9,7 @@
 #include "AbilitySystem/Data/AbilityInfo.h"
 #include "AbilitySystem/Data/LevelUpInfo.h"
 #include "Player/AuraPlayerState.h"
-
+// ViewModel 层用 UE MVVM 把存档槽位状态双向绑定到 UI 控件，属性变化时广播委托刷新 HUD
 void UOverlayWidgetController::BroadcastInitialValues()
 {
 

@@ -4,7 +4,7 @@
 #include "AbilitySystem/Abilities/AuraGameplayAbility.h"
 
 #include "AbilitySystem/AuraAttributeSet.h"
-
+// 公共冷却/耗蓝/标签校验、激活前置检查、命中路由（框架行为）
 FString UAuraGameplayAbility::GetDescription(int32 Level)
 {
 	return FString::Printf(TEXT("<Default>%s, </><Level>%d</>"), L"Default Ability Name - LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum LoremIpsum", Level);

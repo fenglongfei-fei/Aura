@@ -2,7 +2,7 @@
 
 
 #include "AbilitySystem/Abilities/AuraSummonAbility.h"
-
+// 在 ±Spread/2 扇区内均匀取 N 个方向，随机距离取点，再从上向下做 800 单位射线检测把落点吸附到地面；随从种类用 RandRange 随机选取
 TArray<FVector> UAuraSummonAbility::GetSpawnLocations()
 {
 	const FVector Forward = GetAvatarActorFromActorInfo()->GetActorForwardVector();

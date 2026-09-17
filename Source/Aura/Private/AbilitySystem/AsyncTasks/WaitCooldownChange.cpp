@@ -3,7 +3,7 @@
 
 #include "AbilitySystem/AsyncTasks/WaitCooldownChange.h"
 #include "AbilitySystemComponent.h"
-
+// 双事件监听：1. 冷却 Tag 移除时广播冷却结束；2.新效果应用时遍历所有同 Tag 效果的剩余时间取最大值广播
 UWaitCooldownChange* UWaitCooldownChange::WaitForCooldownChange(UAbilitySystemComponent* AbilitySystemComponent, const FGameplayTag& InCooldownTag)
 {
 	UWaitCooldownChange* WaitCooldownChange = NewObject<UWaitCooldownChange>();

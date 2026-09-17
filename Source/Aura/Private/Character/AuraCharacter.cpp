@@ -21,7 +21,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "UI/HUD/AuraHUD.h"
-
+// 遍历 ASC 中所有技能（ForEachAbility + Lambda），提取标签/等级/槽位/状态存入 SavedAbilities 数组
+// 升级时按等级表发放属性点/技能点，并调用 UpdateAbilityStatuses 解锁符合等级条件的技能
 AAuraCharacter::AAuraCharacter()
 {
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("CameraBoom");

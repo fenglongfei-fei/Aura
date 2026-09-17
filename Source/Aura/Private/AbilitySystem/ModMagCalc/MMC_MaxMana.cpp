@@ -5,7 +5,7 @@
 
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "Interaction/CombatInterface.h"
-
+// MaxMana = 50 + 2.5×Intelligence + 10×等级
 UMMC_MaxMana::UMMC_MaxMana()
 {
 	IntDef.AttributeToCapture = UAuraAttributeSet::GetIntelligenceAttribute();
@@ -35,5 +35,6 @@ float UMMC_MaxMana::CalculateBaseMagnitude_Implementation(const FGameplayEffectS
 		PlayerLevel = ICombatInterface::Execute_GetPlayerLevel(Spec.GetContext().GetSourceObject());
 	}
 	
+	// MaxMana = 50 + 2.5×Intelligence + 15×等级
 	return 50.f + 2.5f * Int + 15.f * PlayerLevel;
 }

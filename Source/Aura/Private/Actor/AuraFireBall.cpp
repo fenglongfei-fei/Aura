@@ -8,7 +8,7 @@
 #include "GameplayCueManager.h"
 #include "AbilitySystem/AuraAbilitySystemLibrary.h"
 #include "Components/AudioComponent.h"
-
+// 出射/返回两段 Timeline 插值，返回阶段朝 `ReturnToActor`（施法者）飞行，命中时触发爆炸 GameplayCue
 void AAuraFireBall::BeginPlay()
 {
 	Super::BeginPlay();

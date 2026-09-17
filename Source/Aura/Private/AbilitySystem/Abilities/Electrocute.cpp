@@ -2,7 +2,7 @@
 
 
 #include "AbilitySystem/Abilities/Electrocute.h"
-
+// 从一个目标向周边链式扩散（可能 BFS/贪心根据最近目标）并应用递减伤害
 FString UElectrocute::GetDescription(int32 Level)
 {
 	const int32 ScaledDamage = Damage.GetValueAtLevel(Level);

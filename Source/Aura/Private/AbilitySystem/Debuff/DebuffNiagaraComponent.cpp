@@ -1,4 +1,4 @@
-// Copyright Druid Mechanics
+﻿// Copyright Druid Mechanics
 
 
 #include "AbilitySystem/Debuff/DebuffNiagaraComponent.h"
@@ -6,7 +6,7 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystemComponent.h"
 #include "Interaction/CombatInterface.h"
-
+// 对每种伤害类型：有效触发率 = 触发率 × (100 − 目标抗性)%，RandRange(1,100) 抽样判定，命中则把持续伤害/时长/频率写入 EffectContext
 
 UDebuffNiagaraComponent::UDebuffNiagaraComponent()
 {

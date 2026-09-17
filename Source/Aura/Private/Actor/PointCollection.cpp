@@ -5,7 +5,7 @@
 
 #include "AbilitySystem/AuraAbilitySystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-
+// 以根节点为基准将预置点集绕 Z 轴旋转指定偏航角，对每个点做上下射线检测贴合地面并用法线对齐朝向（用于奥术碎片等地面 AoE）
 // Sets default values
 APointCollection::APointCollection()
 {

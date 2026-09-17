@@ -5,7 +5,7 @@
 
 #include "AbilitySystem/AuraAbilitySystemLibrary.h"
 #include "Actor/AuraFireBall.h"
-
+// 调用算法 6 以 360° 均匀生成 N 个火球，延迟生成（SpawnActorDeferred）后逐个激活
 FString UAuraFireBlast::GetDescription(int32 Level)
 {
 	const int32 ScaledDamage = Damage.GetValueAtLevel(Level);

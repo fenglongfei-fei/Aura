@@ -2,7 +2,7 @@
 
 
 #include "UI/ViewModel/MVVM_LoadSlot.h"
-
+// ViewModel 层用 UE MVVM 把存档槽位状态双向绑定到 UI 控件，属性变化时广播委托刷新 HUD
 void UMVVM_LoadSlot::InitializeSlot()
 {
 	const int32 WidgetSwitcherIndex = SlotStatus.GetValue();

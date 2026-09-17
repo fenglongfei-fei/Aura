@@ -6,7 +6,7 @@
 #include "AbilitySystem/AuraAbilitySystemLibrary.h"
 #include "Actor/AuraProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-
+// 生成 projectile actor、碰撞/命中回调、对单体或溅射目标应用伤害
 FString UAuraFireBolt::GetDescription(int32 Level)
 {
 	const int32 ScaledDamage = Damage.GetValueAtLevel(Level);

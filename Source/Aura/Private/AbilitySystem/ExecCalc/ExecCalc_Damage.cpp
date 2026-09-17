@@ -1,4 +1,4 @@
-// Copyright Druid Mechanics
+﻿// Copyright Druid Mechanics
 
 
 #include "AbilitySystem/ExecCalc/ExecCalc_Damage.h"
@@ -12,7 +12,7 @@
 #include "Camera/CameraShakeSourceActor.h"
 #include "Interaction/CombatInterface.h"
 #include "Kismet/GameplayStatics.h"
-
+// GAS 自定义执行计算：分类型伤害 ×（1 − 抗性%）累加 → 格挡判定（伤害减半）→ 有效护甲 = 护甲 ×（1 − 穿透×等级系数）→ 伤害 ×（1 − 有效护甲×等级系数）→ 暴击判定（2×伤害 + 爆伤加成），系数由曲线表按等级取值
 struct AuraDamageStatics
 {
 	DECLARE_ATTRIBUTE_CAPTUREDEF(Armor);
@@ -63,6 +63,8 @@ UExecCalc_Damage::UExecCalc_Damage()
 	RelevantAttributesToCapture.Add(DamageStatics().ArcaneResistanceDef);
 	RelevantAttributesToCapture.Add(DamageStatics().PhysicalResistanceDef);
 }
+
+//算法：根据伤害类型和目标的抗性，计算是否触发debuff，并设置相关属性   --伤害结算流水线--
 
 void UExecCalc_Damage::DetermineDebuff(const FGameplayEffectCustomExecutionParameters& ExecutionParams, const FGameplayEffectSpec& Spec, FAggregatorEvaluateParameters EvaluationParameters,
 						 const TMap<FGameplayTag, FGameplayEffectAttributeCaptureDefinition>& InTagsToDefs) const

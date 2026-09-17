@@ -5,6 +5,7 @@
 
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "Interaction/CombatInterface.h"
+// 捕获活力(Vigor)属性：MaxHealth = 80 + 2.5×Vigor + 10×等级，Modifier Magnitude Calculation 动态计算
 
 UMMC_MaxHealth::UMMC_MaxHealth()
 {
